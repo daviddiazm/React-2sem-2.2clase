@@ -1,6 +1,6 @@
-import React from 'react'
+import React from 'react';
 
-const UserCard = ({user}) => {
+const UserCard = ({ user }) => {
   const userFullname = `${user.name.title} ${user.name.first} ${user.name.last}`;
 
   return (
@@ -10,8 +10,7 @@ const UserCard = ({user}) => {
       <p className=" text-white">{user.email}</p>
       <p className=" text-white">{user.gender}</p>
     </div>
-    
-  )
-}
+  );
+};
 
-export default UserCard
+export default UserCard;

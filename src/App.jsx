@@ -10,14 +10,17 @@ const App = () => {
   const user = users[userIndex];
 
   const changeUser = () => {
-    let newUser = useState(random(0, users.length - 1));
-    while (newUser === userIndex) {}
+    let newUser = random(0, users.length - 1);
+    while (newUser === userIndex) {
+      newUser = random(0, users.length - 1);
+    }
+    setUserIndex(newUser);
   };
 
   return (
     <div className="h-full flex flex-col justify-center items-center p-10">
-      <UserCard user={user}/>
-      <button>a</button>
+      <UserCard user={user} />
+      <button changeUser={changeUser}>a</button>
     </div>
   );
 };
